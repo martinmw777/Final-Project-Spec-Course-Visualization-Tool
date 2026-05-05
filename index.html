@@ -1,0 +1,717 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ACC Course Visualization Tool</title>
+  <!-- bootstrap used for layout (grid), navbar, buttons, and modals -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- styles.css is compiled from scss using variables and custom theme -->
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- favicon added for browser tab -->
+  <link rel="icon" type="image/png" href="images/favicon.ico">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container">
+        <a class="navbar-brand" href="index.html"><span class="brand-mark">ACC</span> Course Visualization Tool</a>
+       <!-- hamburger menu button for smaller screens -->
+        <!-- accessibility: aria attributes used for screen readers and navigation -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto align-items-lg-center">
+            <li class="nav-item"><a class="nav-link active" href="index.html">Programs</a></li>
+            <li class="nav-item"><a class="nav-link" href="quiz.html">Major Quiz</a></li>
+            <li class="nav-item"><a class="nav-link" href="#programs">Course Cards</a></li>
+            <li class="nav-item"><a class="nav-link external-link" href="https://polytechnic.purdue.edu/academic-areas/acc#undergraduate" target="_blank" rel="noopener">Purdue ACC</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero-panel">
+      <div class="container">
+        <div class="row align-items-center g-4">
+<div class="col-12 text-center">
+  <p class="eyebrow">Purdue School of Applied & Creative Computing</p>
+  <h1>Course Visualization Tool</h1>
+  <p class="lead mx-auto">
+    This tool reorganizes the 9 undergraduate programs into an interactive course visualization tool. Open any program card to view required CIT, CGT, and CNIT coursework, then try the quiz for a recommendation!
+  </p>
+  <div class="hero-actions justify-content-center">
+    <a class="btn btn-gold btn-lg" href="#programs">Explore programs</a>
+    <a class="btn btn-outline-light btn-lg" href="quiz.html">Take the quiz</a>
+  </div>
+</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container pb-5" id="programs" aria-label="Undergraduate program cards">
+     <!-- bootstrap grid system used for responsive layout across screen sizes -->
+      <div class="row g-4">
+
+        <div class="col-12 col-md-6 col-xl-4">
+          <article class="program-card h-100" id="card-animation">
+            <div class="program-image-wrap">
+              <img src="images/animation-visual-effects.jpg" class="program-img" alt="Animation and Visual Effects program image">
+            </div>
+            <div class="program-content">
+              <p class="track-label">Studio Track</p>
+              <h2 class="h4">Animation and Visual Effects</h2>
+              <p>3D modeling, texturing, lighting, rendering, rigging, motion, and visual storytelling.</p>
+              <div class="d-flex justify-content-between align-items-center gap-3 flex-wrap">
+                <span class="campus-tag">West Lafayette • Indianapolis</span>
+                <button class="btn btn-gold" type="button" data-bs-toggle="modal" data-bs-target="#animationModal">View course map</button>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="col-12 col-md-6 col-xl-4">
+          <article class="program-card h-100" id="card-cit">
+            <div class="program-image-wrap">
+              <img src="images/CIT.jpg" class="program-img" alt="Computer and Information Technology program image">
+            </div>
+            <div class="program-content">
+              <p class="track-label">IT Systems Track</p>
+              <h2 class="h4">Computer and Information Technology</h2>
+              <p>Applications, databases, systems, IT projects, and problem solving for real organizations.</p>
+              <div class="d-flex justify-content-between align-items-center gap-3 flex-wrap">
+                <span class="campus-tag">West Lafayette • Indianapolis • Statewide</span>
+                <button class="btn btn-gold" type="button" data-bs-toggle="modal" data-bs-target="#citModal">View course map</button>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="col-12 col-md-6 col-xl-4">
+          <article class="program-card h-100" id="card-network">
+            <div class="program-image-wrap">
+              <img src="images/network-engineering-technology-degree-purdue.jpg" class="program-img" alt="Computing Infrastructure and Network Engineering Technology program image">
+            </div>
+            <div class="program-content">
+              <p class="track-label">Infrastructure Track</p>
+              <h2 class="h4">Computing Infrastructure and Network Engineering Technology</h2>
+              <p>Secure, efficient, and reliable wired and wireless network infrastructure.</p>
+              <div class="d-flex justify-content-between align-items-center gap-3 flex-wrap">
+                <span class="campus-tag">West Lafayette • Indianapolis</span>
+                <button class="btn btn-gold" type="button" data-bs-toggle="modal" data-bs-target="#networkModal">View course map</button>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="col-12 col-md-6 col-xl-4">
+          <article class="program-card h-100" id="card-cyber">
+            <div class="program-image-wrap">
+              <img src="images/cybersecurity-degree-purdue.jpg" class="program-img" alt="Cybersecurity program image">
+            </div>
+            <div class="program-content">
+              <p class="track-label">Security Track</p>
+              <h2 class="h4">Cybersecurity</h2>
+              <p>Secure coding, cryptography, forensics, UNIX fundamentals, law, and incident response.</p>
+              <div class="d-flex justify-content-between align-items-center gap-3 flex-wrap">
+                <span class="campus-tag">West Lafayette • Indianapolis • Kokomo</span>
+                <button class="btn btn-gold" type="button" data-bs-toggle="modal" data-bs-target="#cyberModal">View course map</button>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="col-12 col-md-6 col-xl-4">
+          <article class="program-card h-100" id="card-data">
+            <div class="program-image-wrap">
+              <img src="images/data-analytics-major-purdue.jpg" class="program-img" alt="Data Analytics, Technologies, and Applications program image">
+            </div>
+            <div class="program-content">
+              <p class="track-label">Data Track</p>
+              <h2 class="h4">Data Analytics, Technologies, and Applications</h2>
+              <p>Statistical thinking, databases, machine learning, and data-driven decision support.</p>
+              <div class="d-flex justify-content-between align-items-center gap-3 flex-wrap">
+                <span class="campus-tag">West Lafayette</span>
+                <button class="btn btn-gold" type="button" data-bs-toggle="modal" data-bs-target="#dataModal">View course map</button>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="col-12 col-md-6 col-xl-4">
+          <article class="program-card h-100" id="card-game">
+            <div class="program-image-wrap">
+              <img src="images/game-design-major-purdue.jpg" class="program-img" alt="Game Development program image">
+            </div>
+            <div class="program-content">
+              <p class="track-label">Interactive Media Track</p>
+              <h2 class="h4">Game Development</h2>
+              <p>Game design, animation, visualization, rendering, programming, and production practice.</p>
+              <div class="d-flex justify-content-between align-items-center gap-3 flex-wrap">
+                <span class="campus-tag">West Lafayette</span>
+                <button class="btn btn-gold" type="button" data-bs-toggle="modal" data-bs-target="#gameModal">View course map</button>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="col-12 col-md-6 col-xl-4">
+          <article class="program-card h-100" id="card-themed">
+            <div class="program-image-wrap">
+              <img src="images/themed-entertainment-experiences-purdue.jpg" class="program-img" alt="Themed Entertainment Design program image">
+            </div>
+            <div class="program-content">
+              <p class="track-label">Experience Design Track</p>
+              <h2 class="h4">Themed Entertainment Design</h2>
+              <p>Attraction design, immersive environments, themed spaces, and creative production workflows.</p>
+              <div class="d-flex justify-content-between align-items-center gap-3 flex-wrap">
+                <span class="campus-tag">Indianapolis only</span>
+                <button class="btn btn-gold" type="button" data-bs-toggle="modal" data-bs-target="#themedModal">View course map</button>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="col-12 col-md-6 col-xl-4">
+          <article class="program-card h-100" id="card-ux">
+            <div class="program-image-wrap">
+              <img src="images/ux-design-major-purdue.jpg" class="program-img" alt="UX Design program image">
+            </div>
+            <div class="program-content">
+              <p class="track-label">Human-Centered Track</p>
+              <h2 class="h4">UX Design</h2>
+              <p>Human-centered product design focused on research, screens, strategy, and usability.</p>
+              <div class="d-flex justify-content-between align-items-center gap-3 flex-wrap">
+                <span class="campus-tag">West Lafayette</span>
+                <button class="btn btn-gold" type="button" data-bs-toggle="modal" data-bs-target="#uxModal">View course map</button>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="col-12 col-md-6 col-xl-4">
+          <article class="program-card h-100" id="card-web">
+            <div class="program-image-wrap">
+              <img src="images/web-programming-major-purdue.jpg" class="program-img" alt="Web Programming and Design program image">
+            </div>
+            <div class="program-content">
+              <p class="track-label">Web App Track</p>
+              <h2 class="h4">Web Programming and Design</h2>
+              <p>Front-end, back-end, databases, interactive media, and secure user-friendly web systems.</p>
+              <div class="d-flex justify-content-between align-items-center gap-3 flex-wrap">
+                <span class="campus-tag">West Lafayette</span>
+                <button class="btn btn-gold" type="button" data-bs-toggle="modal" data-bs-target="#webModal">View course map</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+  <!-- bootstrap modal component used for course maps -->
+  <div class="modal fade" id="animationModal" tabindex="-1" aria-labelledby="animationLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable modal-xl">
+      <div class="modal-content course-modal">
+        <div class="modal-header">
+          <div>
+            <p class="track-label mb-1">Studio Track</p>
+            <h2 class="modal-title h4" id="animationLabel">Animation and Visual Effects</h2>
+          </div>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row g-4">
+            <div class="col-lg-7">
+              <h3 class="h5 section-kicker">Required CIT/CGT/CNIT Courses</h3>
+              <p class="small text-muted">Required CIT, CNIT, and CGT courses for the major selected:</p>
+              <ol class="course-list">
+                  <li>CGT 11200 - Sketching For Visualization And Communication</li>
+                  <li>CGT 11600 - Geometric Modeling For Visualization And Communication</li>
+                  <li>CGT 11800 - Fundamentals Of Imaging Technology</li>
+                  <li>CGT 12300 - Animation Foundations</li>
+                  <li>CGT 14100 - Internet Foundations Technologies And Development</li>
+                  <li>CGT 14700 - Visual Effects Introduction</li>
+                  <li>CGT 17208 - User Experience Design Studio I: Fundamentals</li>
+                  <li>CGT 20500 - Portfolio Review</li>
+                  <li>CGT 24100 - Introduction To Computer Animation</li>
+                  <li>CGT 25001 - Computer Graphics Professional Practices I</li>
+                  <li>CGT 27000 - Introduction To Data Visualization</li>
+                  <li>CGT 30505 - Portfolio II</li>
+                  <li>CGT 40500 - Senior Portfolio Review</li>
+                  <li>CGT 41101 - Contemporary Problems In Applied Computer Graphics I</li>
+                  <li>CGT 41201 - Contemporary Problems In Applied Computer Graphics II</li>
+                  <li>CGT 44200 - Production For Computer Animation (taken twice for 6 credits)</li>
+                  <li>CGT 45001 - Computer Graphics Professional Practices II</li>
+                  <li>CGT Entertainment Selectives - 15 credits</li>
+              </ol>
+            </div>
+            <div class="col-lg-5">
+              <div class="modal-side-panel">
+                <h3 class="h5">Career examples</h3>
+                <div class="career-chip-wrap">
+                  <span class="career-chip">Animator</span>
+                  <span class="career-chip">Visual Effects Artist</span>
+                  <span class="career-chip">3D Modeler</span>
+                  <span class="career-chip">Lighting/Rendering Artist</span>
+                  <span class="career-chip">Motion Graphics Designer</span>
+                </div>
+                <hr>
+                <h3 class="h5">Why this pathway fits</h3>
+                <p>3D modeling, texturing, lighting, rendering, rigging, motion, and visual storytelling.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="citModal" tabindex="-1" aria-labelledby="citLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable modal-xl">
+      <div class="modal-content course-modal">
+        <div class="modal-header">
+          <div>
+            <p class="track-label mb-1">IT Systems Track</p>
+            <h2 class="modal-title h4" id="citLabel">Computer and Information Technology</h2>
+          </div>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row g-4">
+            <div class="col-lg-7">
+              <h3 class="h5 section-kicker">Required CIT/CGT/CNIT Courses</h3>
+              <p class="small text-muted">Required CIT, CNIT, and CGT courses for the major selected:</p>
+              <ol class="course-list">
+                  <li>CNIT 15501 - Introduction To Software Development Concepts</li>
+                  <li>CNIT 17600 - Information Technology Architectures</li>
+                  <li>CNIT 18000 - Introduction To Systems Development</li>
+                  <li>CNIT 24200 - System Administration</li>
+                  <li>CNIT 25501 - Object-Oriented Programming Introduction</li>
+                  <li>CNIT 27000 - Cybersecurity Fundamentals I</li>
+                  <li>CNIT 27200 - Database Fundamentals</li>
+                  <li>CNIT 28000 - Systems Analysis And Design Methods</li>
+                  <li>CNIT 32000 - Policy, Regulation, And Globalization In Information Technology</li>
+                  <li>CNIT 48000 - Managing Information Technology Projects</li>
+                  <li>Programming Selective - CNIT 31500 Systems Programming or CNIT 32500 Object-Oriented Application Development</li>
+                  <li>Database Selective - CNIT 37200 Database Programming or CNIT 39200 Enterprise Data Management</li>
+                  <li>Information Technology Selectives - 15 credits, with at least 9 credits from CNIT</li>
+              </ol>
+            </div>
+            <div class="col-lg-5">
+              <div class="modal-side-panel">
+                <h3 class="h5">Career examples</h3>
+                <div class="career-chip-wrap">
+                  <span class="career-chip">IT Support Specialist</span>
+                  <span class="career-chip">Systems Analyst</span>
+                  <span class="career-chip">Database Administrator</span>
+                  <span class="career-chip">Application Support Analyst</span>
+                  <span class="career-chip">IT Project Coordinator</span>
+                </div>
+                <hr>
+                <h3 class="h5">Why this pathway fits</h3>
+                <p>Applications, databases, systems, IT projects, and problem solving for real organizations.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="networkModal" tabindex="-1" aria-labelledby="networkLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable modal-xl">
+      <div class="modal-content course-modal">
+        <div class="modal-header">
+          <div>
+            <p class="track-label mb-1">Infrastructure Track</p>
+            <h2 class="modal-title h4" id="networkLabel">Computing Infrastructure and Network Engineering Technology</h2>
+          </div>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row g-4">
+            <div class="col-lg-7">
+              <h3 class="h5 section-kicker">Required CIT/CGT/CNIT Courses</h3>
+              <p class="small text-muted">Required CIT, CNIT, and CGT courses for the major selected:</p>
+              <ol class="course-list">
+                  <li>CNIT 15501 - Introduction To Software Development Concepts</li>
+                  <li>CNIT 17600 - Information Technology Architectures</li>
+                  <li>CNIT 18000 - Introduction To Systems Development or CNIT 18200 System And Organizational Security</li>
+                  <li>CNIT 24200 - System Administration</li>
+                  <li>CNIT 25501 - Object-Oriented Programming Introduction</li>
+                  <li>CNIT 27000 - Cybersecurity Fundamentals I</li>
+                  <li>CNIT 27200 - Database Fundamentals</li>
+                  <li>CNIT 31500 - Systems Programming</li>
+                  <li>CNIT 34400 - Network Engineering Fundamentals</li>
+                  <li>CNIT 32000 Policy, Regulation, And Globalization In Information Technology or CNIT 37100 Cyberlaw And Ethics</li>
+                  <li>CNIT 34000 - UNIX Administration</li>
+                  <li>CNIT 34220 - Network Administration</li>
+                  <li>CNIT 34500 - Internetwork Design And Implementation</li>
+                  <li>CNIT 34600 - Wireless Networks</li>
+                  <li>CNIT 45500 - Network Security</li>
+                  <li>CNIT 48000 - Managing Information Technology Projects</li>
+                  <li>Computing Infrastructure Selective - 6 credits from CNIT 41700, 43500, 44500, 44600, 45600, 47000, or 55500</li>
+                  <li>Information Technology Selectives - 6 credits, with at least 3 credits from CNIT</li>
+              </ol>
+            </div>
+            <div class="col-lg-5">
+              <div class="modal-side-panel">
+                <h3 class="h5">Career examples</h3>
+                <div class="career-chip-wrap">
+                  <span class="career-chip">Network Engineer</span>
+                  <span class="career-chip">Systems Administrator</span>
+                  <span class="career-chip">Network Analyst</span>
+                  <span class="career-chip">Cloud Infrastructure Technician</span>
+                  <span class="career-chip">Wireless Network Specialist</span>
+                </div>
+                <hr>
+                <h3 class="h5">Why this pathway fits</h3>
+                <p>Secure, efficient, and reliable wired and wireless network infrastructure.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="cyberModal" tabindex="-1" aria-labelledby="cyberLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable modal-xl">
+      <div class="modal-content course-modal">
+        <div class="modal-header">
+          <div>
+            <p class="track-label mb-1">Security Track</p>
+            <h2 class="modal-title h4" id="cyberLabel">Cybersecurity</h2>
+          </div>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row g-4">
+            <div class="col-lg-7">
+              <h3 class="h5 section-kicker">Required CIT/CGT/CNIT Courses</h3>
+              <p class="small text-muted">Required CIT, CNIT, and CGT courses for the major selected:</p>
+              <ol class="course-list">
+                  <li>CNIT 15501 - Introduction To Software Development Concepts</li>
+                  <li>CNIT 17600 - Information Technology Architectures</li>
+                  <li>CNIT 18200 - System And Organizational Security</li>
+                  <li>CNIT 24200 - System Administration</li>
+                  <li>CNIT 25501 - Object-Oriented Programming Introduction</li>
+                  <li>CNIT 27000 - Cybersecurity Fundamentals I</li>
+                  <li>CNIT 27200 - Database Fundamentals</li>
+                  <li>CNIT 34000 - UNIX Administration</li>
+                  <li>CNIT 34220 - Network Administration</li>
+                  <li>CNIT 34400 - Network Engineering Fundamentals</li>
+                  <li>CNIT 48000 - Managing Information Technology Projects</li>
+                  <li>CNIT 27100 - Cybersecurity Fundamentals II</li>
+                  <li>CNIT 37000 - Introduction To Cryptography</li>
+                  <li>CNIT 37100 - Cyberlaw And Ethics</li>
+                  <li>CNIT 32300 - Basic Cyberforensics</li>
+                  <li>CNIT 42200 - Cyber Criminology</li>
+                  <li>CNIT 45500 - Network Security</li>
+                  <li>CNIT 47000 - Incident Response Management</li>
+                  <li>CNIT 47100 - Vulnerability Analysis And Testing</li>
+                  <li>Cybersecurity Selectives - 9 credits from approved CNIT cybersecurity options</li>
+              </ol>
+            </div>
+            <div class="col-lg-5">
+              <div class="modal-side-panel">
+                <h3 class="h5">Career examples</h3>
+                <div class="career-chip-wrap">
+                  <span class="career-chip">Cybersecurity Analyst</span>
+                  <span class="career-chip">SOC Analyst</span>
+                  <span class="career-chip">Penetration Tester</span>
+                  <span class="career-chip">Digital Forensics Analyst</span>
+                  <span class="career-chip">Incident Response Analyst</span>
+                </div>
+                <hr>
+                <h3 class="h5">Why this pathway fits</h3>
+                <p>Secure coding, cryptography, forensics, UNIX fundamentals, law, and incident response.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="dataModal" tabindex="-1" aria-labelledby="dataLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable modal-xl">
+      <div class="modal-content course-modal">
+        <div class="modal-header">
+          <div>
+            <p class="track-label mb-1">Data Track</p>
+            <h2 class="modal-title h4" id="dataLabel">Data Analytics, Technologies, and Applications</h2>
+          </div>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row g-4">
+            <div class="col-lg-7">
+              <h3 class="h5 section-kicker">Required CIT/CGT/CNIT Courses</h3>
+              <p class="small text-muted">Required CIT, CNIT, and CGT courses for the major selected:</p>
+              <ol class="course-list">
+                  <li>CNIT 15501 - Introduction To Software Development Concepts</li>
+                  <li>CNIT 17600 - Information Technology Architectures</li>
+                  <li>CNIT 18000 - Introduction To Systems Development</li>
+                  <li>CNIT 24200 - System Administration</li>
+                  <li>CNIT 25501 - Object-Oriented Programming Introduction</li>
+                  <li>CNIT 27000 - Cybersecurity Fundamentals I</li>
+                  <li>CNIT 28000 - Systems Analysis And Design Methods</li>
+                  <li>CNIT 32000 - Policy, Regulation, And Globalization In Information Technology</li>
+                  <li>CNIT 48000 - Managing Information Technology Projects</li>
+                  <li>CNIT 27200 - Database Fundamentals</li>
+                  <li>CNIT 32200 - Research Methodology And Design</li>
+                  <li>CNIT 37200 - Database Programming</li>
+                  <li>CNIT 39200 - Enterprise Data Management</li>
+                  <li>CNIT 48200 - Six Sigma Data Quality For Continuous Improvement</li>
+                  <li>CNIT 48300 - Applied Machine Learning</li>
+                  <li>CNIT 48400 - Applications In Data Science</li>
+              </ol>
+            </div>
+            <div class="col-lg-5">
+              <div class="modal-side-panel">
+                <h3 class="h5">Career examples</h3>
+                <div class="career-chip-wrap">
+                  <span class="career-chip">Data Analyst</span>
+                  <span class="career-chip">Business Intelligence Analyst</span>
+                  <span class="career-chip">Database Developer</span>
+                  <span class="career-chip">Machine Learning Assistant</span>
+                  <span class="career-chip">Data Visualization Specialist</span>
+                </div>
+                <hr>
+                <h3 class="h5">Why this pathway fits</h3>
+                <p>Statistical thinking, databases, machine learning, and data-driven decision support.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="gameModal" tabindex="-1" aria-labelledby="gameLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable modal-xl">
+      <div class="modal-content course-modal">
+        <div class="modal-header">
+          <div>
+            <p class="track-label mb-1">Interactive Media Track</p>
+            <h2 class="modal-title h4" id="gameLabel">Game Development</h2>
+          </div>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row g-4">
+            <div class="col-lg-7">
+              <h3 class="h5 section-kicker">Required CIT/CGT/CNIT Courses</h3>
+              <p class="small text-muted">Required CIT, CNIT, and CGT courses for the major selected:</p>
+              <ol class="course-list">
+                  <li>CGT 10501 - Introduction To Games</li>
+                  <li>CGT 11505 - Scripting And Computational Thinking</li>
+                  <li>CGT 11600 - Geometric Modeling For Visualization And Communication</li>
+                  <li>CGT 11800 - Fundamentals Of Imaging Technology</li>
+                  <li>CGT 14100 - Internet Foundations Technologies And Development</li>
+                  <li>CGT 17208 - User Experience Design Studio I: Fundamentals</li>
+                  <li>CGT 20500 - Portfolio Review</li>
+                  <li>CGT 24500 - Game Development I: Core Skills And Technologies</li>
+                  <li>CGT 25001 - Computer Graphics Professional Practices I</li>
+                  <li>CGT 25500 - Game Development II: Design And Psychology</li>
+                  <li>CGT 27000 - Introduction To Data Visualization</li>
+                  <li>CGT 30505 - Portfolio II</li>
+                  <li>CGT 36500 - Game Development Practicum (taken twice for 6 credits)</li>
+                  <li>CGT 40500 - Senior Portfolio Review</li>
+                  <li>CGT 41101 - Contemporary Problems In Applied Computer Graphics I</li>
+                  <li>CGT 41201 - Contemporary Problems In Applied Computer Graphics II</li>
+                  <li>CGT 45001 - Computer Graphics Professional Practices II</li>
+                  <li>CGT Entertainment Selectives - 15 credits</li>
+              </ol>
+            </div>
+            <div class="col-lg-5">
+              <div class="modal-side-panel">
+                <h3 class="h5">Career examples</h3>
+                <div class="career-chip-wrap">
+                  <span class="career-chip">Game Developer</span>
+                  <span class="career-chip">Level Designer</span>
+                  <span class="career-chip">Technical Artist</span>
+                  <span class="career-chip">Simulation Developer</span>
+                  <span class="career-chip">Interactive Media Designer</span>
+                </div>
+                <hr>
+                <h3 class="h5">Why this pathway fits</h3>
+                <p>Game design, animation, visualization, rendering, programming, and production practice.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="themedModal" tabindex="-1" aria-labelledby="themedLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable modal-xl">
+      <div class="modal-content course-modal">
+        <div class="modal-header">
+          <div>
+            <p class="track-label mb-1">Experience Design Track</p>
+            <h2 class="modal-title h4" id="themedLabel">Themed Entertainment Design</h2>
+          </div>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row g-4">
+            <div class="col-lg-7">
+              <h3 class="h5 section-kicker">Required CIT/CGT/CNIT Courses</h3>
+              <p class="small text-muted">Required CIT, CNIT, and CGT courses for the major selected:</p>
+              <ol class="course-list">
+                  <li>CGT 11200 - Sketching For Visualization And Communication</li>
+                  <li>CGT 11600 - Geometric Modeling For Visualization And Communication</li>
+                  <li>CGT 11700 - Illustrating For Visualization And Communication</li>
+                  <li>CGT 11800 - Fundamentals Of Imaging Technology</li>
+                  <li>CGT 12300 - Animation Foundations</li>
+                  <li>CGT 14700 - Visual Effects Introduction</li>
+                  <li>CGT 20400 - Introduction To Themed Attraction Design</li>
+                  <li>CGT 20500 - Portfolio Review</li>
+                  <li>CGT 25001 - Computer Graphics Professional Practices I</li>
+                  <li>CGT 25100 - Principles Of Creative Design</li>
+                  <li>CGT 30505 - Portfolio II</li>
+                  <li>CGT 31300 - Digital Painting I For Computer Graphics</li>
+                  <li>CGT 31700 - Planning And Communicating Themed Attraction Design</li>
+                  <li>CGT 32800 - Business Of Themed Entertainment</li>
+                  <li>CGT 36700 - Previsualization In Themed Entertainment</li>
+                  <li>CGT 40500 - Senior Portfolio Review</li>
+                  <li>CGT 40700 - Current And Future Trends In Themed Attraction Design</li>
+                  <li>CGT 41101 - Contemporary Problems In Applied Computer Graphics I</li>
+                  <li>CGT 44200 - Production For Computer Animation</li>
+                  <li>CGT 45001 - Computer Graphics Professional Practices II</li>
+                  <li>CGT Globalization Selective - 3 credits</li>
+                  <li>CGT Entertainment Selectives - 15 credits</li>
+              </ol>
+            </div>
+            <div class="col-lg-5">
+              <div class="modal-side-panel">
+                <h3 class="h5">Career examples</h3>
+                <div class="career-chip-wrap">
+                  <span class="career-chip">Themed Entertainment Designer</span>
+                  <span class="career-chip">Exhibit Designer</span>
+                  <span class="career-chip">Attraction Designer</span>
+                  <span class="career-chip">Immersive Experience Designer</span>
+                  <span class="career-chip">Creative Technologist</span>
+                </div>
+                <hr>
+                <h3 class="h5">Why this pathway fits</h3>
+                <p>Attraction design, immersive environments, themed spaces, and creative production workflows.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="uxModal" tabindex="-1" aria-labelledby="uxLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable modal-xl">
+      <div class="modal-content course-modal">
+        <div class="modal-header">
+          <div>
+            <p class="track-label mb-1">Human-Centered Track</p>
+            <h2 class="modal-title h4" id="uxLabel">UX Design</h2>
+          </div>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row g-4">
+            <div class="col-lg-7">
+              <h3 class="h5 section-kicker">Required CIT/CGT/CNIT Courses</h3>
+              <p class="small text-muted">Required CIT, CNIT, and CGT courses for the major selected:</p>
+              <ol class="course-list">
+                  <li>CGT 11800 - Fundamentals Of Imaging Technology</li>
+                  <li>CGT 14100 - Internet Foundations Technologies And Development</li>
+                  <li>CGT 17207 - User Experience Design Experience Studio I</li>
+                  <li>CGT 17208 - User Experience Design Studio I: Fundamentals</li>
+                  <li>CGT 25001 - Computer Graphics Professional Practices I</li>
+                  <li>CGT 27000 - Introduction To Data Visualization</li>
+                  <li>CGT 27108 - User Experience Design Studio II: Screen</li>
+                  <li>CGT 27207 - User Experience Design Experience Studio II (taken twice)</li>
+                  <li>CGT 27208 - User Experience Design Studio III: Cross-Channel</li>
+                  <li>CGT 37108 - User Experience Design Studio IV: Strategy</li>
+                  <li>CGT 37207 - User Experience Design Experience Studio III (taken twice)</li>
+                  <li>CGT 37208 - User Experience Design Studio V: Specialization</li>
+                  <li>CGT 41101 - Contemporary Problems In Applied Computer Graphics I</li>
+                  <li>CGT 41201 - Contemporary Problems In Applied Computer Graphics II</li>
+                  <li>CGT 45001 - Computer Graphics Professional Practices II</li>
+                  <li>CGT Global Selectives - 9 credits</li>
+                  <li>CGT Leadership - 9 credits</li>
+              </ol>
+            </div>
+            <div class="col-lg-5">
+              <div class="modal-side-panel">
+                <h3 class="h5">Career examples</h3>
+                <div class="career-chip-wrap">
+                  <span class="career-chip">UX Designer</span>
+                  <span class="career-chip">UI Designer</span>
+                  <span class="career-chip">Product Designer</span>
+                  <span class="career-chip">User Researcher</span>
+                  <span class="career-chip">Usability Analyst</span>
+                </div>
+                <hr>
+                <h3 class="h5">Why this pathway fits</h3>
+                <p>Human-centered product design focused on research, screens, strategy, and usability.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="webModal" tabindex="-1" aria-labelledby="webLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable modal-xl">
+      <div class="modal-content course-modal">
+        <div class="modal-header">
+          <div>
+            <p class="track-label mb-1">Web App Track</p>
+            <h2 class="modal-title h4" id="webLabel">Web Programming and Design</h2>
+          </div>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row g-4">
+            <div class="col-lg-7">
+              <h3 class="h5 section-kicker">Required CIT/CGT/CNIT Courses</h3>
+              <p class="small text-muted">Required CIT, CNIT, and CGT courses for the major selected:</p>
+              <ol class="course-list">
+                  <li>CGT 11505 - Scripting And Computational Thinking</li>
+                  <li>CGT 11600 - Geometric Modeling For Visualization And Communication</li>
+                  <li>CGT 11800 - Fundamentals Of Imaging Technology</li>
+                  <li>CGT 14100 - Internet Foundations Technologies And Development</li>
+                  <li>CGT 17208 - User Experience Design Studio I: Fundamentals</li>
+                  <li>CGT 25001 - Computer Graphics Professional Practices I</li>
+                  <li>CGT 25300 - Front-End Web Development</li>
+                  <li>CGT 35300 - Principles Of Interactive And Dynamic Media</li>
+                  <li>CGT 35600 - Web Programming, Development And Data Integration</li>
+                  <li>CGT 37000 - Interactive Data Visualization</li>
+                  <li>CGT 41101 - Contemporary Problems In Applied Computer Graphics I</li>
+                  <li>CGT 41201 - Contemporary Problems In Applied Computer Graphics II</li>
+                  <li>CGT 45001 - Computer Graphics Professional Practices II</li>
+                  <li>CGT 45600 - Advanced Web Programming, Development And Data Integration</li>
+                  <li>CGT Selectives - 12 credits, including one 200-level or higher CGT selective</li>
+              </ol>
+            </div>
+            <div class="col-lg-5">
+              <div class="modal-side-panel">
+                <h3 class="h5">Career examples</h3>
+                <div class="career-chip-wrap">
+                  <span class="career-chip">Web Developer</span>
+                  <span class="career-chip">Front-End Developer</span>
+                  <span class="career-chip">Full-Stack Developer</span>
+                  <span class="career-chip">Web Application Developer</span>
+                  <span class="career-chip">UI Developer</span>
+                </div>
+                <hr>
+                <h3 class="h5">Why this pathway fits</h3>
+                <p>Front-end, back-end, databases, interactive media, and secure user-friendly web systems.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer text-center py-4">
+    <div class="container">
+      <p class="mb-1">ACC Course Visualization Tool © 2026</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
